@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Sheikh Muhammad Aaqib</title>
+<meta name="description" content="Research by Sheikh Muhammad Aaqib: 150 kW SiC integrated EV charger-inverter, 15 kW GaN quad-active-bridge converter, LLC resonant converters and integrated magnetics.">
+<meta name="author" content="Sheikh Muhammad Aaqib">
+<meta property="og:title" content="Research | Sheikh Muhammad Aaqib">
+<meta property="og:description" content="Research by Sheikh Muhammad Aaqib: 150 kW SiC integrated EV charger-inverter, 15 kW GaN quad-active-bridge converter, LLC resonant converters and integrated magnetics.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aaqibsh.github.io/research.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">S. M. Aaqib</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav"><a href="index.html">Home</a><a href="research.html" aria-current="page">Research</a><a href="publications.html">Publications</a><a href="projects.html">Projects</a><a href="cv.html">CV</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<section class="page-head"><h1>Research</h1><p class=lead>I work on high-power wide-bandgap converters that connect electric vehicles, batteries, renewables and the grid, with a focus on making them efficient, compact and reliable.</p></section>
+<section class="research-item wide">
+  <div class="research-text">
+    <p class="eyebrow">Current &middot; Sep 2026 &ndash; present &middot; U.S. Department of Energy</p>
+    <h2>150 kW integrated charger-inverter for electric vehicles</h2>
+    <p>Electric vehicles usually carry a traction inverter and a separate on-board charger. This project merges the two:
+    one SiC power stage drives the motor while the car is moving and becomes the charger when it is parked. The battery
+    feeds an isolated dual-active-bridge (DAB) converter, then a three-phase inverter with an LCL filter. The inverter output
+    can be switched between a permanent-magnet synchronous motor, three-phase AC charging from the 208 V grid, and a
+    separate DC charging port.</p>
+    <h3>My contributions</h3>
+    <ul>
+      <li>Designed the DSP control board: schematic, PCB layout and component selection, including differential PWM, fault
+        and temperature links for noise immunity and a resolver interface for motor position sensing.</li>
+      <li>Sized the power stage: 1200 V SiC modules, DC-link capacitor, LCL grid filter, DAB transformer and leakage
+        inductance, and dead times for soft switching.</li>
+      <li>Developing DAB firmware with several phase-shift modulation schemes.</li>
+      <li>The system is now in testing, and I am building the dynamometer setup for inverter validation.</li>
+    </ul>
+  </div>
+  <figure class="figure">
+    <a href="assets/ev-charger-inverter.png" target="_blank" rel="noopener"><img src="assets/ev-charger-inverter.png" alt="Integrated EV charger-inverter: grid and charging station, PMSM motor, LCL filter, three-phase inverter, DC link, DAB converter and battery pack" loading="lazy"></a>
+    <figcaption>One power stage serves as both the motor drive and the AC/DC charger.</figcaption>
+  </figure>
+</section>
+
+<section class="research-item">
+  <div class="research-text">
+    <p class="eyebrow">Completed &middot; Jan 2025 &ndash; Aug 2026 &middot; DOE Award DE-SC0023970</p>
+    <h2>15 kW GaN quad-active-bridge converter for DC microgrids</h2>
+    <p>A quad-active-bridge (QAB) converter joins four DC ports (PV, battery, EV and the DC grid) through one
+    high-frequency multi-winding transformer, so power can move in any direction between them with galvanic isolation.
+    This project, carried out with Epower Technology LLC, built a 15 kW, 400 V prototype with GaN transistors switching at
+    50&ndash;100 kHz.</p>
+    <h3>My contributions</h3>
+    <ul>
+      <li>Designed the QAB converter, the power-stage PCB layout and the gate-driver circuitry for fast GaN switching.</li>
+      <li>Developed firmware for bidirectional multi-port power-flow control with single-, extended- and dual-phase-shift
+        (SPS, EPS, DPS) modulation.</li>
+      <li>Carried out all prototype testing and soft-switching validation.</li>
+      <li>Built thermal models of the high-frequency transformer losses to support the electrothermal design.</li>
+    </ul>
+    <p class="note">Outputs: first-author paper at IEEE COMPEL 2025; a journal paper being finalized; one review paper submitted.</p>
+  </div>
+  <figure class="figure">
+    <a href="assets/qab-converter.jpg" target="_blank" rel="noopener"><img src="assets/qab-converter.jpg" alt="Quad-active-bridge converter: grid, EV, battery and solar ports connected through a four-winding high-frequency transformer" loading="lazy"></a>
+    <figcaption>Four active bridges share one high-frequency transformer.</figcaption>
+  </figure>
+</section>
+
+<section class="research-item single">
+  <div class="research-text">
+    <p class="eyebrow">M.S. research &middot; 2022 &ndash; 2024 &middot; Kyungpook National University</p>
+    <h2>Resonant converters, integrated magnetics and fuel-cell emulation</h2>
+    <p>In the Power Electronics and Magnetics Design (PEMD) Lab, advised by Prof. Honnyong Cha, I worked on:</p>
+    <ul>
+      <li><strong>Thesis:</strong> an interleaved LLC resonant converter using a quad-winding transformer and a shared inductor.</li>
+      <li><strong>Fuel-cell emulator</strong> (Korean government-sponsored): a buck-converter-based emulator that reproduces real
+        fuel-cell I-V characteristics as hydrogen pressure, air pressure and cell temperature change.</li>
+      <li><strong>Integrated magnetics for PFC:</strong> an EE-core coupled inductor with a center-gap structure for a two-phase
+        interleaved boost PFC converter, and how the coupling affects performance.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>&copy; 2026 Sheikh Muhammad Aaqib &middot; Power Electronics, The University of Tennessee, Knoxville</p>
+    <p class="footer-links">
+      <a href="mailto:saaqib@vols.utk.edu">Email</a>
+      <a href="https://scholar.google.com/citations?user=oz0rc0MAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/maaqib" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </div>
+</footer>
+<script>
+  (function () {
+    var b = document.querySelector('.nav-toggle'), n = document.getElementById('site-nav');
+    b.addEventListener('click', function () {
+      var open = n.classList.toggle('open');
+      b.setAttribute('aria-expanded', open);
+    });
+  })();
+</script>
+</body>
+</html>

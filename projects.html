@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Sheikh Muhammad Aaqib</title>
+<meta name="description" content="Hardware projects by Sheikh Muhammad Aaqib: SiC EV charger-inverter, GaN quad-active-bridge, LLC resonant converter, fuel-cell emulator and more.">
+<meta name="author" content="Sheikh Muhammad Aaqib">
+<meta property="og:title" content="Projects | Sheikh Muhammad Aaqib">
+<meta property="og:description" content="Hardware projects by Sheikh Muhammad Aaqib: SiC EV charger-inverter, GaN quad-active-bridge, LLC resonant converter, fuel-cell emulator and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aaqibsh.github.io/projects.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">S. M. Aaqib</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="projects.html" aria-current="page">Projects</a><a href="cv.html">CV</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<section class="page-head"><h1>Projects</h1><p class=lead>Hardware I have designed, built and tested, from Ph.D. research back to my undergraduate years.</p></section><section class="project-grid"><article class="card project">
+  <p class="eyebrow">Ph.D. &middot; current &middot; 2026 &ndash; present</p>
+  <h2>150 kW SiC integrated EV charger-inverter</h2>
+  <p>A single SiC power stage (DAB plus three-phase inverter with LCL filter) that works as the traction motor drive and as an AC or DC charger. I designed the DSP control board, sized the power stage and am writing the DAB modulation firmware. Now in testing, with a dynamometer setup being built.</p>
+  <ul class="chips"><li>SiC</li><li>DAB</li><li>Three-phase inverter</li><li>LCL filter</li><li>PCB design</li><li>DSP firmware</li></ul>
+</article><article class="card project">
+  <p class="eyebrow">Ph.D. &middot; completed &middot; 2025 &ndash; 2026</p>
+  <h2>15 kW GaN quad-active-bridge converter</h2>
+  <p>A four-port isolated DC-DC converter linking PV, battery, EV and the DC grid. I designed the converter, PCB layout and gate drivers, wrote the power-flow control firmware with SPS/EPS/DPS modulation, did all of the testing, and modeled transformer losses thermally.</p>
+  <ul class="chips"><li>GaN</li><li>QAB</li><li>Phase-shift modulation</li><li>Soft switching</li><li>Thermal modeling</li></ul>
+</article><article class="card project">
+  <p class="eyebrow">M.S. thesis &middot; 2022 &ndash; 2024</p>
+  <h2>Interleaved LLC resonant converter</h2>
+  <p>An interleaved LLC resonant converter that uses a quad-winding transformer and a shared inductor to integrate the magnetics.</p>
+  <ul class="chips"><li>LLC resonant</li><li>Integrated magnetics</li><li>Interleaving</li></ul>
+</article><article class="card project">
+  <p class="eyebrow">M.S. &middot; government-sponsored &middot; 2022 &ndash; 2024</p>
+  <h2>Fuel-cell emulator</h2>
+  <p>A buck-converter-based emulator that reproduces real fuel-cell I-V curves as hydrogen pressure, air pressure and cell temperature vary, for safe testing of fuel-cell power electronics.</p>
+  <ul class="chips"><li>Buck converter</li><li>Emulation</li><li>Fuel cells</li></ul>
+</article><article class="card project">
+  <p class="eyebrow">M.S. &middot; 2022 &ndash; 2024</p>
+  <h2>Coupled inductor for interleaved boost PFC</h2>
+  <p>An EE-core coupled inductor with a center-gap structure for a two-phase interleaved boost PFC converter, and an analysis of how coupling affects its performance.</p>
+  <ul class="chips"><li>PFC</li><li>Coupled inductor</li><li>Magnetics design</li></ul>
+</article><article class="card project">
+  <p class="eyebrow">Research paper &middot; 2021</p>
+  <h2>Harmonic distortion in industry</h2>
+  <p>Measured and analyzed harmonic distortion levels in an industrial setting using power quality measurements and system simulation (ICECE 2021).</p>
+  <ul class="chips"><li>Power quality</li><li>Harmonics</li><li>Field measurements</li></ul>
+</article><article class="card project">
+  <p class="eyebrow">B.Sc. thesis &middot; 2019</p>
+  <h2>Smart personal assistant for home automation</h2>
+  <p>An embedded home-automation assistant built as my undergraduate thesis at UET Lahore.</p>
+  <ul class="chips"><li>Embedded systems</li><li>Home automation</li></ul>
+</article></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>&copy; 2026 Sheikh Muhammad Aaqib &middot; Power Electronics, The University of Tennessee, Knoxville</p>
+    <p class="footer-links">
+      <a href="mailto:saaqib@vols.utk.edu">Email</a>
+      <a href="https://scholar.google.com/citations?user=oz0rc0MAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/maaqib" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </div>
+</footer>
+<script>
+  (function () {
+    var b = document.querySelector('.nav-toggle'), n = document.getElementById('site-nav');
+    b.addEventListener('click', function () {
+      var open = n.classList.toggle('open');
+      b.setAttribute('aria-expanded', open);
+    });
+  })();
+</script>
+</body>
+</html>
